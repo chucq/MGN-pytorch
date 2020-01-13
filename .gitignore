@@ -6,3 +6,4 @@ loss/__pycache__/
 model/__pycache__/
 model_best.pt
 utils/__pycache__/
+test/

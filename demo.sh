@@ -47,4 +47,5 @@
 #CUDA_VISIBLE_DEVICES=2,3 python3 main.py --datadir ../reid-mgn/Market-1501-v15.09.15/ --batchid 16 --batchtest 32 --test_every 50 --epochs 500 --decay_type step_300_420 --loss 1*CrossEntropy+1*Triplet --margin 1.2 --pool avg --save sgd_1 --nGPU 2 --lr 1e-2 --optimizer SGD --random_erasing --reset --re_rank --nesterov
 
 #0.9383 rank1: 0.9578 rank3: 0.9721 rank5: 0.9783 rank10: 0.9843 (Best: 0.9383 @epoch 400)
-CUDA_VISIBLE_DEVICES=0,1,2,3 python main.py --datadir ./dataset/Market-1501-v15.09.15/ --batchid 16 --batchtest 32 --test_every 50 --epochs 402 --decay_type step_320_380 --loss 1*CrossEntropy+2*Triplet --margin 0.9 --save adam_3 --nGPU 4  --lr 2e-4 --optimizer ADAM --random_erasing --reset --re_rank --amsgrad
+#CUDA_VISIBLE_DEVICES=0,1,2,3 python main.py --datadir ./dataset/Market-1501-v15.09.15/ --batchid 16 --batchtest 32 --test_every 50 --epochs 402 --decay_type step_320_380 --loss 1*CrossEntropy+2*Triplet --margin 0.9 --save adam_3 --nGPU 4  --lr 2e-4 --optimizer ADAM --random_erasing --reset --re_rank --amsgrad
+CUDA_VISIBLE_DEVICES=3,4,5,6 python main.py --datadir ./dataset/Market-1501-v15.09.15/ --batchid 16 --batchtest 32 --test_every 50 --epochs 402 --decay_type step_320_380 --loss 1*CrossEntropy+2*Triplet --margin 0.9 --load adam_3 --nGPU 4  --lr 2e-4 --optimizer ADAM --random_erasing --reset --re_rank --amsgrad --test_only
