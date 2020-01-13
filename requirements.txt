@@ -1,4 +1,3 @@
-torchvision
 matplotlib
 argparse
 sklearn

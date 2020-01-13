@@ -2,10 +2,8 @@
 Reproduction of paper:[Learning Discriminative Features with Multiple Granularities for Person Re-Identification](https://arxiv.org/abs/1804.01438v1)
 
 ## Dependencies
-
 - Python >= 3.5
-- PyTorch >= 0.4.0
-- TorchVision
+- PyTorch >= 0.4.0 & TorchVision (refer to the install instruction on the pytorch website, "conda install pytorch torchvision cudatoolkit=10.1 -c pytorch")
 - Matplotlib
 - Argparse
 - Sklearn
