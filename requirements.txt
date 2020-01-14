@@ -1,7 +1,7 @@
 matplotlib
 argparse
 sklearn
-pillow
+pillow<7.0.0
 numpy
 scipy
 tqdm
