@@ -56,6 +56,9 @@ parser.add_argument('--load', type=str, default='', help='file name to load')
 parser.add_argument('--save_models', action='store_true', help='save all intermediate models')
 parser.add_argument('--pre_train', type=str, default='', help='pre-trained model directory')
 
+parser.add_argument('--model_path', type=str, default='/home/ccq/MGN-pytorch/model_best.pt', help='pre-trained ckpt model file path')
+parser.add_argument('--input_dir', type=str, default='/home/ccq/MGN-pytorch/test/zijing', help='test imput image dir')
+
 args = parser.parse_args()
 
 for arg in vars(args):
