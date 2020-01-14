@@ -21,6 +21,7 @@ if not args.cpu and args.nGPU > 1:
     gmodel = model.module
 
 model_path = '/home/ccq/MGN-pytorch/model_best.pt'
+model_path = '/home/ccq/MGN-pytorch/experiment/best_now/model/model_best.pt'
 gmodel.load_state_dict(torch.load(model_path, {}),strict=False)
 
 model.eval()
