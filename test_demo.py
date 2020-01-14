@@ -20,8 +20,7 @@ if not args.cpu and args.nGPU > 1:
     model = nn.DataParallel(model, range(args.nGPU))
     gmodel = model.module
 
-model_path = '/home/ccq/MGN-pytorch/model_best.pt'
-model_path = '/home/ccq/MGN-pytorch/experiment/best_now/model/model_best.pt'
+model_path = args.model_path
 gmodel.load_state_dict(torch.load(model_path, {}),strict=False)
 
 model.eval()
@@ -33,7 +32,7 @@ test_transform = transforms.Compose([
             transforms.Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225])
         ])
 
-inputdir = '/home/ccq/MGN-pytorch/test/zijing'
+inputdir = args.input_dir
 imglist = os.listdir(inputdir)
 imglist.sort()
 inputlist = []
