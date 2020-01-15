@@ -1,6 +1,5 @@
 demo.sh
 __pycache__/
-data/
 dataset/
 experiment/
 loss/__pycache__/
