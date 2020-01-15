@@ -1,3 +1,4 @@
+demo.sh
 __pycache__/
 data/
 dataset/
@@ -7,4 +8,3 @@ model/__pycache__/
 model_best.pt
 utils/__pycache__/
 test/
-demo.sh
