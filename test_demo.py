@@ -63,5 +63,10 @@ for i in range(len(imglist)):
 
 print('Time for extract all features\' cosine similarity:', time.time()-t2, 's')
 print('image index:\n',list(enumerate(imglist)))
-print('similarity matrix:\n',result)
-
+print('similarity matrix:')
+for i in range(result.shape[0]): 
+    ds = ''
+    for j in range(result.shape[1]):
+        ds += ('%.2f'%(result[i][j])+' ')
+    result[i][i] = 0
+    print(ds+'query imgname: %s, hit imgname: %s, max similarity: %.2f'%(imglist[i], imglist[result[i].argmax()], np.max(result[i])))
